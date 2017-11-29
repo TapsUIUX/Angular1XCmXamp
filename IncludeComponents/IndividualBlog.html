@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-8">
+<small> The parameter passed is {{ indBlogParam }}</small>
+        <div ng-repeat="Indblogs in getIndBlogs | limitTo:1">
+            <h3>{{Indblogs.blogHeading}}</h3>
+            <p class=" ">{{ Indblogs.blogDate |limitTo: 10   }}</p>
+            
+            <hr>
+            <p>{{Indblogs.blogContent}}</p>
+            <p>{{Indblogs.blogId}}</p>
+            
+        </div>
+         <hr>
+        <div class="row">
+            <div class="clearfix ">
+            <div class="col-xs-12 col-md-2 fs30"> Comments </div> 
+<!--            <button class="btn btn-primary btn-lg pull-right ">Comment</button>-->
+            </div>
+            
+             <section>
+                <label for="comment"></label>
+                <textarea ng-model="comments_content" name="Comment" id=""  class="form-control" cols=" " rows="5" style="resize:vertical"></textarea>
+                <br>
+                <div class="pull-right"> 
+                <button class="btn btn-success" ng-disabled="comments_content ==''" ng-click="postComments(comments_content,indBlogParam)">Save</button> 
+                <button class="btn btn-warning"  ng-click="reset()">Reset</button> 
+                 
+<!--                <pre>{{comments_content}}{{var1}}{{var2}}</pre>--> 
+                </div> 
+                <br>       
+            </section>
+            
+            
+            
+            <hr>
+
+            <div  ng-repeat="comments in getComments | orderBy : comments.comment_date : true">
+                <p>{{comments.comment_content}}</p>
+                <p>{{comments.comment_date| limitTo: 10}}</p>
+                <button class="btn btn-success btn-sm    clearfix">reply</button>
+                 <hr>
+            </div>
+            
+           
+            
+            
+            
+       
+        </div>
+
+
+    </div>
+
+
+    <div class="col-xs-12 col-sm-4">
+        <div class=" panel-default">
+            <div class="panel-body">
+                <h3>About Author</h3>
+                <hr>
+                <p>he remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all minihe remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all minihe remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all minihe remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all ministries and Western compounds.The remaking of the Afghan capital almost triples the footprint of a fortresslike Green Zone to take in nearly all mini</p>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>

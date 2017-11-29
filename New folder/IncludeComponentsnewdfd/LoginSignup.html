@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <form action="" class="from-group" autocomplete="off">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h4>Login</h4>
+                </div>
+            </div>
+            <label for="username">Email</label>
+            <input type="email" class="form-control" placeholder="Email" autocomplete="off" autofocus>
+            <label for="password">Password</label>
+            <input type="Password" class="form-control" placeholder="Password" autocomplete="off">
+            <hr>
+            <button class="btn btn-primary btn-lg">Login</button>
+            <button class="btn btn-warning btn-lg">Reset</button>
+        </form>
+    </div>
+
+
+
+
+    <div class="col-xs-12 col-sm-6 " ng-controller="signupCtrl">
+        <form ng-submit="signupFormName.$valid && formSubmitted(signupFormName) " class="from-group" autocomplete="off" name="signupFormName" novalidate>
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h4>Sign UP</h4>
+                </div>
+            </div>
+            
+            <div  ng-class="{'has-error': !signupFormName.userName.$valid , 'has-success':signupFormName.userName.$valid}">
+            
+            <label for="username">User name</label>
+            <input type="text" class="form-control" placeholder="Username" autocomplete="off" name="userName" autofocus ng-model="signupFormObj.userName" required ng-minlength=5 >
+
+            <p class="help-block c-warning" ng-show="(signupFormName.userName.$pristine && signupFormName.$submitted) || (!signupFormName.userName.$valid)">User name is required, and length should be more than 5.</p>
+            </div>
+
+
+            <label for="userEmail">Email</label>
+            <input type="email" class="form-control" placeholder="Email" autocomplete="off" autofocus name="userEmail" ng-model="signupFormObj.userEmail" ng-pattern="/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,3}$/">
+
+
+            <p class="help-block c-warning" ng-show="(signupFormName.userEmail.$pristine)">User email is required</p>
+            <p class="help-block c-warning" ng-show="(!signupFormName.userEmail.$pristine && !signupFormName.userEmail.$valid) ">Please enter Valid email id.</p>
+
+
+
+            <label for="password">Password</label>
+            <input type="Password" class="form-control" placeholder="Password" autocomplete="off" name="userPassword" ng-model="signupFormObj.userPassword" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/" required>
+
+            <p class="help-block c-warning" ng-show="(signupFormName.userPassword.$pristine)">Password required</p>
+            <p class="help-block c-warning" ng-show="(!signupFormName.userPassword.$pristine && !signupFormName.userPassword.$valid) ">Should contain Upper case, Lower case, numbers.</p>
+
+            <hr>
+            <button class="btn btn-primary btn-lg" type="submit" ng-disabled="signupFormName.$invalid">Sign up</button>
+            <button class="btn btn-warning btn-lg" type="reset"> Reset</button>
+            <pre>{{signupFormObj.userName}}  </pre>
+            <pre> {{signupFormName}} </pre>
+        </form>
+
+
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp">
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+    <title>CMS</title>
+    <!-- JS LINKS -->
+
+    <script type="text/javascript" src="Javascripts/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="Javascripts/angular.js"></script>
+    <script type="text/javascript" src="Javascripts/angular-Route.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+    <script type="text/javascript" src="AngComponentsJS/app.js"></script>
+    <script type="text/javascript" src="AngComponentsJS/controllers.js"></script>
+    <script type="text/javascript" src="AngComponentsJS/Services.js"></script>
+    <script type="text/javascript" src="AngComponentsJS/Directive.js"></script>
+
+<!--
+       <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+      <script>tinymce.init({ selector:'textarea' });</script>
+-->
+
+
+
+
+
+    <!-- STYLE LINKS -->
+    <script src="StyleSheets/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="StyleSheets/bootstrap.css">
+    <link rel="stylesheet" href="StyleSheets/TapsCSS.css">
+
+</head>
+
+<body>
+  <div class="content">
+  hello:
+  </div>
+  <script>
+$(document).ready(function() {
+ // JsonP request.  
+  $.getJSON('https://jsonplaceholder.typicode.com/posts/1/comments?postId=1&callback=?').done(
+    function(data){
+      console.log(data);
+    }
+  );
+
+
+  });
+
+  </script>
+
+
+
+   <div class="container-fluid ">
+    <div class="panel panel-primary no-mar-bottom ">
+        <div class="panel-heading text-center ">
+            <h1>Blog CMS</h1>
+        </div>
+    </div>
+
+    <ng-include src="'IncludeComponents/Navbar.html'"></ng-include>
+    </div>
+
+    <div class="container">
+
+<!--        <ng-view></ng-view>-->
+
+<!--       <ui-view></ui-view>-->
+
+       <div ui-view></div>
+
+
+
+
+       <div ui-view="admin"></div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+    factObj.getBlogs = function(response){
+        
+//      var  deferred = $q.defer();
+      var jsonData = [];    
+      jsonData = $http.get('Jsons/blogs.json');
+       return jsonData; 
+//            .then(function(resolve){
+//            var data = response.data ;
+//            deferred.resolve(response.data);
+//        },function(error){deferred.reject('ERROR')})
+//        console.log(deferred.promise);
+//        
+//       return deferred.promise ;  
+    };

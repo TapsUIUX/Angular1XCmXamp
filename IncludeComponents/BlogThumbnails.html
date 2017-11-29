@@ -1,0 +1,43 @@
+<div class="row">
+
+    <div class="col-xs-12 col-md-8">
+        <div class="panel panel-default" ng-repeat="blogs in getBlogs | orderBy : '-blogDate'">
+            <div class="panel-body">
+                <h3 ng-switch on="blogs.blogDate">
+                    <span ng-switch-when="9/9/2017" getnewdate header="{{blogs.blogHeading}}"> </span>
+                    <span ng-switch-default>{{blogs.blogHeading}} </span>
+                </h3>
+                <!--           <p>{{blogs.blogContent}}</p>              -->
+                <!--          <a href="#!/indblog/{{blogs.blogId}} "> <button class="btn btn-primary btn-sm" >Read</button></a>-->
+                <a ui-sref="indblog({param:{{blogs.blogId}}})"> <button class="btn btn-primary btn-sm">Read</button></a>
+                <!--           <button class="btn btn-success btn-sm  ">Like</button>-->
+                <p class="pull-right">{{blogs.blogDate | limitTo: 10}}</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="col-xs-12 col-md-4 ">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <h3>Most Liked</h3>
+            </div>
+        </div>
+
+        <getblogsdir filterbylikes="blogLikes"></getblogsdir>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <h3>Most Commented</h3>
+            </div>
+        </div>
+
+        <getblogsdir filterbycomments="blogComments"></getblogsdir>
+
+
+    </div>
+</div>

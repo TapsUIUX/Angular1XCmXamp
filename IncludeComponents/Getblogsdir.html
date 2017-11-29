@@ -1,0 +1,14 @@
+ <div class="panel panel-default" ng-repeat="blogs in getBlogs | limitTo:2">
+           <div class="panel-body">         
+           <h3> {{blogs.blogHeading}}</h3>           
+            
+           <p class="pull-right clearfix ">Publish date : {{blogs.blogDate}} </p>
+           <br>
+           <hr>
+           <div class="">
+           <div class=" pull-left">Likes: {{blogs.blogLikes}} </div>            
+           <div class=" pull-left" style="margin-left: 10px;"> Comments: {{blogs.blogComments}} </div>
+           <a href="#!/indblog/{{blogs.blogId}}" > <button class="btn btn-primary btn-sm pull-right"> Read </button> </a>
+           </div>
+           </div> 
+           </div>

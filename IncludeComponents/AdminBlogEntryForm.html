@@ -1,0 +1,28 @@
+<form  name="formname" class="form-group panel panel-primary" ng-submit="formname.$valid && CreateBlogSubmit(createblogForm)"  >
+
+    <div class="panel panel-heading text-center">
+        <h3>Create Blog</h3>
+    </div>
+
+    <div class="container">
+     
+        <div class="form-group">
+        <label for="blog_author">Author</label>
+        <input type="text" class="form-control" name="blogAuthor" placeholder="Required" ng-required="true" maxlength="50" ng-model="createblogForm.blogAuthor">
+        </div>
+       
+        <div class="form-group">
+        <label for="blog_heading">Blog heading</label>
+        <input type="text" class="form-control" name="blogHeading" placeholder="Required" required ng-model="createblogForm.blogHeading">
+        </div>
+        <div class="form-group">
+        <label for="blog_content">Blog content</label>
+        <textarea name="" id="" cols=" " rows="10"   class="form-control" style="resize: vertical" name="blogContent" placeholder="Required" ng-model="createblogForm.blogContent"></textarea>
+        </div>        
+        <button class="btn btn-primary btn-lg pull-right clearfix" ng-disabled="formname.$invalid">Create Blog</button>
+        
+    </div>
+   <br> 
+   
+<!--<pre>{{createblogForm}}</pre><pre>{{createblogForm.blogAuthor}}</pre>-->
+</form>

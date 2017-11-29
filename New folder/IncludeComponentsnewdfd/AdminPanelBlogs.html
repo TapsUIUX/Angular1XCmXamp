@@ -1,0 +1,28 @@
+   <div class="row">
+       <h3>ADMIN PANEL - POSTS</h3>
+       <table class="table table-striped">          
+           <tr>
+               <th>Blog header</th>
+               <th>Blog content</th>
+               <th>Date</th>
+               <th>comments</th>
+               <th>Likes</th>
+               <th>Action</th>
+           </tr>
+           <tr ng-repeat="blogRows in getBlogRows">
+              <td>{{blogRows.blogHeading}}</td>
+               <td>{{blogRows.blogContent}}</td>
+               <td>{{blogRows.blogDate}}</td>
+               <td>New {{blogRows.newBlogs}} / Total {{blogRows.totalBlogs}}</td>
+               <td>{{blogRows.blogLikes}}</td>
+               <td>
+                   <button class="btn btn-primary">Edit</button>
+                   <button class="btn btn-success">View post</button>
+                    <button class="btn btn-danger">Delete</button>
+                   <button class="btn btn-success">View coments</button>
+               </td>
+           </tr>
+        
+                
+       </table>
+     </div>

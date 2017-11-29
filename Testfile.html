@@ -1,0 +1,232 @@
+<html lang="en" ng-app="myApp">
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+    <title>CMS</title>
+    <!-- JS LINKS -->
+
+    <script type="text/javascript" src="Javascripts/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="Javascripts/angular.js"></script>
+    <script type="text/javascript" src="Javascripts/angular-Route.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+    <script type="text/javascript" src="AngComponentsJS/app.js"></script>
+    <script type="text/javascript" src="AngComponentsJS/controllers.js"></script>
+    <script type="text/javascript" src="AngComponentsJS/Services.js"></script>
+    <script type="text/javascript" src="AngComponentsJS/Directive.js"></script>
+    
+<!--
+       <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+      <script>tinymce.init({ selector:'textarea' });</script>
+-->
+    
+    
+
+    
+
+    <!-- STYLE LINKS -->
+    <script src="StyleSheets/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="StyleSheets/bootstrap.css">
+    <link rel="stylesheet" href="StyleSheets/TapsCSS.css">
+
+</head>
+
+<body>
+<div ng-controller="Ctrl1">
+<div class="container">
+
+  <div class="row-fluid">
+    <div class="col-md-6">
+      <h3>Controller</h3>
+  <div class="animated notification show-count" data-count="{{value}}">  </div>
+
+    </div>
+    <div class="col-md-6">
+        <h3>Directive</h3>
+   <div notify value="value"></div>
+    </div>
+  </div>   
+    </div> </div>
+ 
+    </body> </html>
+    <style>
+    
+    
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/* Notifications */
+
+.notification {
+    display: inline-block;
+    position: relative;
+    padding: 0.6em;
+    background: #3498db;
+    border-radius: 0.2em;
+    font-size: 1.3em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.notification::before, 
+.notification::after {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.notification::before {
+    display: block;
+    content: "\f0f3";
+    font-family: "FontAwesome";
+    transform-origin: top center;
+}
+
+.notification::after {
+    font-family: Arial;
+    font-size: 0.7em;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 5px 8px;
+    line-height: 100%;
+    border: 2px #fff solid;
+    border-radius: 60px;
+    background: #3498db;
+    opacity: 0;
+    content: attr(data-count);
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    transition: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.notification.notify::before {
+    -webkit-animation: ring 1.5s ease;
+    animation: ring 1.5s ease;
+}
+
+.notification.show-count::after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+@-webkit-keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+    
+    
+    </style>
+    
+   <script>
+    var myApp = angular.module('myApp', []);
+
+myApp.controller('Ctrl1', function($scope, $timeout) {
+  $scope.value = 1;
+  var el = angular.element(document.querySelector('.notification'));
+  // el.toggleClass('notify');   
+  var poll = function() {
+    $timeout(function() {
+      el.toggleClass('notify');
+      $scope.value++;
+      poll();
+    }, 1000);
+  };
+  poll();
+});
+
+myApp.directive('notify', function() {
+  return {
+    restrict: 'A',
+    template: "<div class='notification notify-dir show-count' data-count='{{value}}'>  </div>",
+    controller: function($scope, $timeout) {
+
+      $scope.value = 1;
+      var el = angular.element(document.querySelector('.notify-dir'));
+      // el.toggleClass('notify');   
+      var poll = function() {
+        $timeout(function() {
+          el.toggleClass('notify');
+          $scope.value++;
+          poll();
+        }, 1000);
+      };
+      poll();
+
+    }
+  };
+});
+    
+    
+    </script>

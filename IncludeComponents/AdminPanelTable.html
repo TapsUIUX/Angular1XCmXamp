@@ -1,0 +1,24 @@
+      
+       <table class="table table-striped">          
+           <tr>
+               <th>Blog header</th>
+<!--               <th>Blog content</th>-->
+               <th>Date</th>
+               <th>comments</th>
+               <th>Likes</th>
+               <th>Action</th>
+           </tr>
+           <tr ng-repeat="blogTableRows in getblogTableRows">
+              <td>{{blogTableRows.blogHeading}}</td>
+<!--               <td>{{blogTableRows.blogContent}}</td>-->
+               <td>{{blogTableRows.blogDate}}</td>
+               <td>New {{blogTableRows.blogLikes}} / Total {{blogTableRows.totalBlogs}}</td>
+               <td>{{blogTableRows.blogLikes}}</td>
+               <td>
+                   <button class="btn btn-primary">Edit</button>
+                   <button class="btn btn-success">View post</button>
+                    <button class="btn btn-danger">Delete</button>
+                   <button class="btn btn-success">View coments</button>
+               </td>
+           </tr>
+       </table>

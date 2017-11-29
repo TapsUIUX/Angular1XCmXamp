@@ -1,0 +1,191 @@
+/**********************************
+
+   CSS Library Created By Taps
+
+*********************************/
+
+
+/****Display*************/
+
+.hide {display: none; }
+.show { display: block ;}
+ 
+
+/*** BACK GROUND COLOR *********/
+
+.bg-safe,.safe{ background-color:#79c279 ; }
+.bg-safe-Trans{ background-color:rgba(121, 194, 121, 0.83) ; }
+
+ 
+.bg-warning-Trans{ background-color:rgba(239, 150, 116, 0.85) ;} 
+.bg-warning,.warning{ background-color: #e9bf74 ; }
+.bg-warning-btn{ background-color: #e9bf74 ; }
+
+
+.bg-danger-trans{ background-color:rgba(239, 109, 109, 0.88) ; } 
+.bg-danger,.danger{ background-color:#ef6d6d ; }
+.bg-danger-btn{ background-color:#ef6d6d ; } 
+.bg-danger-btn:hover{background-color:rgb(235, 95, 95) ;}
+
+
+
+.bg-sky,.sky{ background-color:rgba(58, 152, 200, 0.56); }
+.bg-white{ background-color:white ; }
+.bg-black{ background-color:black ; }
+.bg-green {background-color:green ;}
+.bg-red { background-color:red ;}
+.bg-yellow {background-color:yellow ;}
+.bg-fadedblack {background-color:#565454  ;}
+.bg-button{background-color:#d7d7d7 ;}
+.bg-acco {background-color: #68bce7 ;}
+.bg-content{background-color:#fafafa ;}
+.bg-content2{background-color:#f2f2f2 ;}
+.bg-body{background-color:#ddd ;}
+
+
+/**********Adjusted*****************/
+ 
+ 
+
+/**********BACK GROUND PATTERN TAPSTAMIMAGEFOLDER MUST***********/
+
+.pattern-1,.pat-1 { background-image:url(../Image/TSimages/pat1.png); background-repeat:repeat;}
+.pattern-2,.pat-2 { background-image:url(../Image/TSimages/pat2.png); background-repeat:repeat;}
+.pattern-3,.pat-3{ background-image:url(../Image/TSimages/pat3.png); background-repeat:repeat;}
+.pattern-4,.pat-4{ background-image:url(../Image/TSimages/pat4.png); background-repeat:repeat;}
+.pattern-5,.pat-5 { background-image:url(../Image/TSimages/pat5.png); background-repeat:repeat;}
+.pattern-6,.pat-6 { background-image:url(../Image/TSimages/pat6.png); background-repeat:repeat;}
+.pattern-7,.pat-7 { background-image:url(../Image/TSimages/pat7.png); background-repeat:repeat;}
+.pattern-8,.pat-8 { background-image:url(../Image/TSimages/pat8.png); background-repeat:repeat;}
+.pattern-9,.pat-9 { background-image:url(../Image/TSimages/pat9.png); background-repeat:repeat;}
+.pattern-10,.pat-10 { background-image:url(../Image/TSimages/pat10.png); background-repeat:repeat;}
+.pattern-11,.pat-11 { background-image:url(../Image/TSimages/pat11.gif); background-repeat:repeat;}
+.pattern-12,.pat-12 { background-image:url(../Image/TSimages/pat12.png); background-repeat:repeat;}
+.pattern-13,.pat-13 { background-image:url(../Image/TSimages/pat13.jpg); background-repeat:repeat;}
+.pattern-14,.pat-14 { background-image:url(../Image/TSimages/pat14.jpg); background-repeat:repeat;}
+.pattern-15,.pat-15 { background-image:url(../Image/TSimages/pat15.jpg); background-repeat:repeat;}
+
+
+/*****FONT COLOR********/
+
+.color-safe,.c-safe { color:#79c279; }
+.color-warning,.c-warning { color: #e9bf74; }
+.color-danger,.c-danger {  color:#ef6d6d; }
+.color-white,.c-white { color:white;}
+.color-black,.c-black { color:black;}
+.color-green ,.c-green{ color:green;}
+.color-red,.c-red  { color:red;}
+.color-yellow,.c-yellow { color:yellow;}
+.color-acco,.c-acco { color:#3cade6;}
+
+/*****   FONT SECTION  GOOGLE ********/
+
+.font-oleo{ font-family: 'Oleo Script', cursive ; }
+.font-alice { font-family: 'Alice', serif;  }
+.font-arial { font-family: Arial,Helvetica,sans-serif;  }
+.font-mono{ font-family:monospace,Geneva, sans-serif; }
+
+
+/******** FONT SIZE  15 TO 25 *******************/
+.fs15{ font-size: 15px; }
+.fs16{ font-size: 16px; }
+.fs17{ font-size: 17px; }
+.fs18{ font-size: 18px; }
+.fs19{ font-size: 19px; }
+.fs20{ font-size: 20px; }
+.fs21{ font-size: 21px; }
+.fs22{ font-size: 22px; }
+.fs23{ font-size: 23px; }
+.fs24{ font-size: 24px; }
+.fs25{ font-size: 25px; }
+.fs26{ font-size: 26px; }
+.fs27{ font-size: 27px; }
+.fs28{ font-size: 28px; }
+.fs29{ font-size: 29px; }
+.fs30{ font-size: 30px; }
+.fs35{ font-size: 35px; }
+.fs40{ font-size: 40px; }
+.fs45{ font-size: 45px; }
+.fs50{ font-size: 50px; }
+.fs75{ font-size: 75px; }
+.fs100{ font-size: 100px; }
+.fs150{ font-size: 150px; }
+.fs200{ font-size: 200px; }
+.fs300{ font-size: 300px; }
+.fs400{ font-size: 400px; }
+.fs500{ font-size: 500px; }
+
+
+ 
+
+/*********** Text Position ****************/
+
+.text-center,.t-c { text-align: center !important ;}
+.text-left,.t-l { text-align: left !important ;}
+.text-right,.t-r { text-align: right !important ;}
+ 
+/************* Border Radius ***************/
+
+.border-radius-50,.br50{border-radius:50%;}
+.border-radius-10,.br10{border-radius:10px;}
+.border-radius-5,.br5{border-radius:5px;}
+
+/************* Inline *********************/
+
+.inline { display:inline; }
+
+/**************Float************************/
+
+.float-left,.f-l{ float:left;}
+.float-right,.f-r{ float:right;}
+.float-clear,.f-c{ clear: both;}
+.float-none,.f-n{float:none;}
+.f-c-next::after {clear: both;}
+
+/**************Shadow**********************/
+
+.shadow-box,.s-box { box-shadow: 5px 0px 20px 3px #b1b4b4; } 
+.shadow-bottom { box-shadow: 0px 5px 10px 2px #888888;}
+
+/*****************Cursor*********************/
+.cursor-pointer,.c-p {cursor: pointer;}
+.cursor-na,.c-na {cursor:not-allowed;}
+
+
+/*****************Margin*********************/
+.mauto { margin: 0 auto; }
+
+
+/******************** Button*******************/
+.c2-button {border-bottom: 2px solid rgba(146, 145, 145, 0.44);border-right: 2px solid rgba(144, 143, 143, 0.28); border-top: none;border-left: none; cursor: pointer; padding-top:3px;padding-bottom:3px;text-align: center; }
+
+.c2-button-clear {border-bottom: 2px solid rgba(146, 145, 145, 0.44);border-right: 2px solid rgba(144, 143, 143, 0.28); border-top: none;border-left: none; cursor: pointer; padding-top:3px;padding-bottom:3px;text-align: center; }
+ 
+.oh{overflow:hidden; }
+.lsnone{text-decoration: none;}
+
+
+/*********Check box n Radio **********/
+  input[type="checkbox"], input[type="radio"] {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: .125em;
+    margin-top: .125em;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    top: -.1em; 
+    cursor: pointer;}
+
+/*****************************Vertical Center***********/
+.vertical-center, .v-c {
+  min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
+  display: flex;
+  align-items: center;
+}
+
+/*********************Margin and Padding****************/
+
+.no-mar-bottom {margin-bottom: 0;} 
+.no-mar-top {margin-top: 0;}
+/*webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.5);transform: skew(-15deg) rotate(-6deg);*/
